@@ -33,6 +33,7 @@ This is a monorepo. Each top-level folder is independently consumable.
 | [`fonts/`](fonts/) | The three type families. | see [`fonts/README.md`](fonts/README.md) |
 | [`templates/`](templates/) | Production stylesheets + reference pages for web, docs, decks, poster. | copy the CSS/JS into your project |
 | [`figures/proteus-mpl/`](figures/proteus-mpl/) | Matplotlib theme for publication figures. | PyPI: `pip install proteus-mpl` |
+| [`figures/proteus-plotly/`](figures/proteus-plotly/) | Plotly theme for interactive figures. | `pip install figures/proteus-plotly` |
 | [`talks/beamer/`](talks/beamer/) | LaTeX Beamer theme. | copy into your `.tex` project |
 | [`community/`](community/) | GitHub banners, module identities, diagram language, stickers. | reference / export |
 | [`docs/`](docs/) | The brand guide, written out per topic. | start at [`docs/README.md`](docs/README.md) |

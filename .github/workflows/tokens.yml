@@ -10,6 +10,7 @@ on:
       - "templates/web/site.css"
       - "figures/proteus-mpl/src/**"
       - "figures/proteus-mpl/pyproject.toml"
+      - "figures/proteus-plotly/**"
       - "talks/beamer/beamerthemeproteus.sty"
       - "docs/*.md"
       - "README.md"
@@ -26,6 +27,7 @@ on:
       - "templates/web/site.css"
       - "figures/proteus-mpl/src/**"
       - "figures/proteus-mpl/pyproject.toml"
+      - "figures/proteus-plotly/**"
       - "talks/beamer/beamerthemeproteus.sty"
       - "docs/*.md"
       - "README.md"
@@ -55,6 +57,10 @@ jobs:
         run: python3 tokens/check_copies_selftest.py
       - name: Verify the npm and PyPI packages share one version
         run: python3 tokens/check_versions.py
+      - name: Verify the proteus-plotly colours match tokens.css
+        run: |
+          python3 -m pip install plotly
+          python3 figures/proteus-plotly/check_tokens.py
       - name: Verify the domain colours stay separable under colour blindness
         run: python3 tokens/check_cvd.py
       - name: Verify the separability check catches a broken palette
